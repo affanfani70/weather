@@ -1,0 +1,51 @@
+<%- include('header'); -%>
+    <div class="container" >
+        <div class="row d-flex justify-content-center py-5">
+
+            <div class="col-md-8 col-lg-6 col-xl-5">
+                <div class="card" style="color: #4B515D; border-radius: 35px;">
+                    <div class="card-body p-4">
+
+                        <div class="d-flex">
+                            <h5 class="flex-grow-1" style="color: green;">
+                                <%= country %>: <%= city %>
+                            </h5>
+                            <h6>
+                                <%= date %>
+                            </h6>
+                        </div>
+
+                        <div class="d-flex flex-column text-center mt-5 mb-4">
+                            <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> <%=temprature%> °C </h6>
+                            <span class="small" style="color: #868B94"> <%= condition %></span>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1" style="font-size: 1rem;">
+                                <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1"> Feels like: <%= FeelLike %>°C
+                                </span>
+                                </div>
+                                <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1"> Humidity: <%= Humidity %>%
+                                </span>
+                                </div>
+                                <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"> Description: <%=Description %>
+                                    </span></div>
+                            </div>
+                            <div>
+                                <img class="icon" src=" <%= url  %> " width="100px">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <form action="/" method="post">
+                    <input class="form-control me-2" name="inpTxt" type="search" placeholder="Search by city"
+                        aria-label="Search" style="border-radius: 10px; margin-top: 5px;">
+                    <button class="btn btn-light" type="submit" style="margin:3px 7px;">Search</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <%- include('footer'); -%>
